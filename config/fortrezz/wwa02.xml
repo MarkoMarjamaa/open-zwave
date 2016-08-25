@@ -10,6 +10,8 @@
 		</CommandClass>
 		<CommandClass id="112" name="COMMAND_CLASS_CONFIGURATION" version="1" request_flags="4" innif="true">
 			<Instance index="1" />
+			<Value type="byte" genre="config" instance="1" index="1" label="Low Temperature Trigger Point" units="C" min="-127" max="127" value="4" />
+			<Value type="byte" genre="config" instance="1" index="2" label="High Temperature Trigger Point" units="C" min="-127" max="127" value="70" />
 		</CommandClass>
 		<CommandClass id="113" name="COMMAND_CLASS_ALARM" version="2" request_flags="2" innif="true">
 			<Instance index="1" />
@@ -37,11 +39,9 @@
 		<CommandClass id="133" name="COMMAND_CLASS_ASSOCIATION" version="1" request_flags="4" innif="true">
 			<Instance index="1" />
 			<Associations num_groups="3">
-				<Group index="1" max_associations="5" label="Group 1" auto="true">
-					<Node id="1" />
-				</Group>
-				<Group index="2" max_associations="5" label="Group 2" auto="false" />
-				<Group index="3" max_associations="5" label="Group 3" auto="false" />
+				<Group index="1" max_associations="5" label="Temperature and Water Alarm" auto="true" />
+				<Group index="2" max_associations="5" label="Water Alarm" auto="false" />
+				<Group index="3" max_associations="5" label="Temperature Alarm" auto="false" />
 			</Associations>
 		</CommandClass>
 		<CommandClass id="134" name="COMMAND_CLASS_VERSION" version="1" request_flags="4" innif="true">
